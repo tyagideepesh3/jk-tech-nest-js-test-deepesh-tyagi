@@ -23,13 +23,6 @@ import { UserRole } from "./entities/user.entity";
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-  @Post()
-  @UseGuards(RolesGuard)
-  @Roles(UserRole.ADMIN)
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.usersService.create(createUserDto);
-  }
-
   @Get()
   @UseGuards(RolesGuard)
   @Roles(UserRole.ADMIN)
@@ -47,13 +40,6 @@ export class UsersController {
   @Roles(UserRole.ADMIN)
   findOne(@Param("id") id: string) {
     return this.usersService.findById(id);
-  }
-
-  @Patch(":id")
-  @UseGuards(RolesGuard)
-  @Roles(UserRole.ADMIN)
-  update(@Param("id") id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.usersService.update(id, updateUserDto);
   }
 
   @Patch(":id/role")
