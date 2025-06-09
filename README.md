@@ -84,6 +84,8 @@ npm run start:dev
 
 The API will be available at `http://localhost:3001`
 
+The API for production will be available at `https://jk-tech-nest-js-test-deepesh-tyagi.onrender.com`
+
 ## API Endpoints
 
 ### Authentication
