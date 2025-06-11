@@ -82,6 +82,12 @@ npm run migration:run
 npm run start:dev
 ```
 
+6. Run the test cases:
+
+```bash
+npm run test
+```
+
 The API will be available at `http://localhost:3001`
 
 The API for production will be available at `https://jk-tech-nest-js-test-deepesh-tyagi.onrender.com`
@@ -178,6 +184,11 @@ The API includes comprehensive error handling with appropriate HTTP status codes
 ## Environment Variables
 
 See `.env.example` for all required environment variables.
+
+## Test cases
+
+- Authentication controller based test case by mocking the AuthService
+- Users service based test case by mocking the Sequelize function
 
 ## Contributing
 
